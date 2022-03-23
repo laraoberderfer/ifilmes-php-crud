@@ -30,7 +30,7 @@ class Filme{
         //acesso ao banco e tabelas do sistema
         if(!isset($_REQUEST['codigo'])){
             $this->action = "auxiliar.php?incluir=1";
-            $this->legenda = "Incluir Filme";
+            $this->legenda = "Incluir Livro";
             $this->titulofilme = "";
             $this->sinopse     = "";
             $this->quantidade  = "";

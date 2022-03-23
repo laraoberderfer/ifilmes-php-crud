@@ -11,7 +11,7 @@ $filme = new FilmeControler();
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
-  <title>IFilmes</title>
+  <title>BibliotecaChiquim</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
@@ -30,15 +30,14 @@ $filme = new FilmeControler();
   </div>
   <!-- formulario -->
   <div class="column col-sm-7">
-    <div class="page-header text-muted">Filmes </div>
+    <div class="page-header text-muted">Livros </div>
       <form class="form-horizontal" action="<?php echo $filme->getAction(); ?>" method="post"> 
         <fieldset>
           <!-- Form Name -->
           <legend><?php echo $filme->getLegenda();?> !</legend>
-
           <!-- Text input-->
           <div class="form-group">
-            <label for="titulofilme">Filme</label>
+            <label for="titulofilme">Livros</label>
             <input type="text" class="form-control" id="titulofilme" name="titulofilme" value="<?php echo $filme->getTitulo(); ?>" >
           </div>
           <!-- Textarea -->
@@ -53,7 +52,7 @@ $filme = new FilmeControler();
           </div>
           <!-- Text input-->
           <div class="form-group">
-            <label for="trailer">Trailer</label>
+            <label for="trailer">Spoiler</label>
             <input type="text" class="form-control" id="trailer" name="trailer" value="<?php echo $filme->getTrailer(); ?>"  class="input-xxlarge">
           </div> 
           <!-- Button -->
@@ -67,14 +66,14 @@ $filme = new FilmeControler();
   <!-- lista -->
   <div class="container-fluid">  
     <div class="page-header text-muted divider">
-      Filmes Cadastrados
+      Livros Cadastrados
     </div>
   </div>
   
   <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col" class="col-sm-3">Filme</th>
+      <th scope="col" class="col-sm-3">livros</th>
       <th scope="col"></th>
       <th scope="col"></th>
       <th scope="col"></th>
@@ -87,7 +86,7 @@ $filme = new FilmeControler();
     </tbody>                     	
   </table>                      
   <hr>
-    <a class="btn btn-info" href="<?php echo "auxiliar.php?opcao=1"; ?>" target="_blank" role="button">Imprimir Listagem de Filmes</a>  
+    <a class="btn btn-info" href="<?php echo "auxiliar.php?opcao=1"; ?>" target="_blank" role="button">Imprimir Listagem de Livros</a>  
   <hr>
   <!-- /lista -->
   <hr />

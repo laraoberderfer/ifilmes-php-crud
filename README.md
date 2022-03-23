@@ -1,9 +1,6 @@
-# Sistema IFilmes 1.0 - 2021
-Professora Lara Popov Zambiasi Bazzi Oberderfer - IFSC Chapecó	
+Base no projeto da professora Sistema IFilmes 1.0 - 2021
 
-Sistema online para gerenciamento de filmes. É possível realizar o CRUD (inserir, imprimir, alterar, excluir) filmes, funcionários e clientes.
 
----
 # Importante:
 -> Acesso no servidor local: http://localhost 
 -> Acesso ao site:
