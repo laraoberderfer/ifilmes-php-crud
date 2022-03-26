@@ -3,7 +3,7 @@
 ini_set('display_errors', true);*/
 
 include_once("controllers/UsuarioControler.php");
-include_once("controllers/FilmeControler.php");
+include_once("controllers/LivrosControler.php");
 
 $senha = "";
 $email = "";
@@ -26,38 +26,40 @@ if(isset($_GET['login'])){
 }
 
 if(isset($_REQUEST['codigo'])){
-    $filme = new FilmeControler();
+    $livros = new LivrosControler();
     $codigo	= $_REQUEST['codigo'];
-    $filme->excluirFilme($codigo);
+    $livros->excluirLivros($codigo);
 }
 
 if(isset($_REQUEST['codigoAlt'])){
-    $dados[] = $_REQUEST['titulofilme'];
-    $dados[] = $_REQUEST['sinopse'];
-    $dados[] = $_REQUEST['quantidade'];
-    $dados[] = $_REQUEST['trailer'];
-    $dados[] = $_REQUEST['codigoAlt'];
+    $dados[] = $_REQUEST['nome'];
+    $dados[] = $_REQUEST['paginas'];
+    $dados[] = $_REQUEST['autor'];
+    $dados[] = $_REQUEST['genero'];
+    $dados[] = $_REQUEST['datadepublicacao'];
+   
 
-    $filme = new FilmeControler();
-    $filme->alteraFilme($dados);
+    $livros = new LivrosControler();
+    $livros->alteraLivros($dados);
 }
 
 if(isset($_REQUEST['incluir'])){
-    $dados[] = $_REQUEST['titulofilme'];
-    $dados[] = $_REQUEST['sinopse'];
-    $dados[] = $_REQUEST['quantidade'];
-    $dados[] = $_REQUEST['trailer'];
+    $dados[] = $_REQUEST['nome'];
+    $dados[] = $_REQUEST['paginas'];
+    $dados[] = $_REQUEST['autor'];
+    $dados[] = $_REQUEST['genero'];
+    $dados[] = $_REQUEST['datadepublicacao'];
 
-    $filme = new FilmeControler();
-    $filme->incluiFilme($dados);
+    $livros = new LivrosControler();
+    $livros->incluirLivros($dados);
 }
 
 if(isset($_REQUEST['opcao'])){
-    $filme = new FilmeControler();
+    $livros = new LivrosControler();
     if($_REQUEST['opcao']==1){
-        $filme->imprimeTodos();
+        $livros->imprimeTodos();
     } else if($_REQUEST['opcao']==2){
-        $filme->imprimeById($_REQUEST['codigoImp']);
+        $livros->imprimeById($_REQUEST['codigoImp']);
     }
 }
 ?>
